@@ -1,1 +1,0 @@
-connection: "beck-test-geospatial"

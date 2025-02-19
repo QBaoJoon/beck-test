@@ -34,7 +34,16 @@ view: overture_maps {
   }
   dimension: today_day_of_week {
     type: string
-    sql: TO_CHAR(CURRENT_DATE(), 'Day') ;;
+    sql:  CASE
+            WHEN EXTRACT(DAYOFWEEK FROM CURRENT_DATE) = 1 THEN 'Sunday'
+            WHEN EXTRACT(DAYOFWEEK FROM CURRENT_DATE) = 2 THEN 'Monday'
+            WHEN EXTRACT(DAYOFWEEK FROM CURRENT_DATE) = 3 THEN 'Tuesday'
+            WHEN EXTRACT(DAYOFWEEK FROM CURRENT_DATE) = 4 THEN 'Wednesday'
+            WHEN EXTRACT(DAYOFWEEK FROM CURRENT_DATE) = 5 THEN 'Thursday'
+            WHEN EXTRACT(DAYOFWEEK FROM CURRENT_DATE) = 6 THEN 'Friday'
+            WHEN EXTRACT(DAYOFWEEK FROM CURRENT_DATE) = 7 THEN 'Saturday'
+            ELSE 'Unknown'
+          END;;
     description: "Shows the day of the week for today."
   }
   measure: count {
