@@ -32,6 +32,11 @@ view: overture_maps {
     type: string
     sql: ${TABLE}.primary ;;
   }
+  dimension: today_day_of_week {
+    type: string
+    sql: TO_CHAR(CURRENT_DATE(), 'Day') ;;
+    description: "Shows the day of the week for today."
+  }
   measure: count {
     type: count
     drill_fields: [id, name]
