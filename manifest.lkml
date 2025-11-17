@@ -12,7 +12,7 @@
 #     external_api_urls: ["https://looker-agent-adk-796178598865.us-central1.run.app"]
 #   }
 # }
-
+# sdgsdgs
 application: explore_assistant_external {
   label: "Bexplore Assistant"
   url: "https://localhost:8080/bundle.js"
