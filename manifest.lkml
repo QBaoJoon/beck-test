@@ -32,3 +32,4 @@ application: explore_assistant_external {
     ]
   }
 }
+# beck alt
