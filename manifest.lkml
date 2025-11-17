@@ -13,6 +13,9 @@
 #   }
 # }
 # sdgsdgs
+
+
+# dfgsdgsdgsg
 application: explore_assistant_external {
   label: "Bexplore Assistant"
   url: "https://localhost:8080/bundle.js"
